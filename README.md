@@ -25,7 +25,7 @@
 }
 ```
 
-3. Run the executable file.
+4. Run the executable file.
 
 **On Windows:**
 
@@ -39,7 +39,7 @@
 chmod +x webhook-finder
 ./webhook-finder
 ```
-4. Read the display name of the Microsoft Teams teams where the webhook is installed/used.
+5. Read the display name of the Microsoft Teams teams where the webhook is installed/used.
 
 ## Configuration
 
