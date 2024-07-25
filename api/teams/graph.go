@@ -58,7 +58,7 @@ func NewTeamsAPIBuilder(baseURL string) *TeamsAPIBuilder {
 }
 
 func (t *TeamsAPIBuilder) ListTeams() string {
-	return t.BaseURL + "/v1.0" + TEAMS_LIST
+	return t.BaseURL + "/v1.0" + TEAMS_LIST + "?$select=id,displayName,description&$top=999"
 }
 
 func (t *TeamsAPIBuilder) ListAppsInTeam(teamID string, appDefinition bool) string {
