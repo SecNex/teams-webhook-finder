@@ -1,5 +1,7 @@
 # Microsoft Teams Webhook Finder
 
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/SecNex/teams-webhook-finder/total)
+
 ## Prerequirements
 
 - Entra ID Enterprise Application registered in Azure AD/Entra ID tenant.
