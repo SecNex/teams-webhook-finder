@@ -33,6 +33,8 @@ func main() {
 	resp, _ = graph.GET(listTeamsUrl)
 	listTeamsResponse, _ := teamsAPI.GetListTeamsResponse(resp)
 	teams := listTeamsResponse.Value
+	log.Printf("Teams found: %d\n", len(teams))
+	affectedTeams := 0
 	for _, team := range teams {
 		listAppsTeamsUrl := teamsAPI.ListAppsInTeam(team.Id, true)
 		resp, _ := graph.GET(listAppsTeamsUrl)
@@ -44,7 +46,9 @@ func main() {
 		for _, app := range apps {
 			if app.AppDefinition.TeamsAppId == incomingWebhookAppId {
 				log.Printf("Incoming Webhook App found in Team: %s\n", team.DisplayName)
+				affectedTeams++
 			}
 		}
 	}
+	log.Printf("Teams affected: %d/%d\n", affectedTeams, len(teams))
 }
