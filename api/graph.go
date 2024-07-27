@@ -94,7 +94,9 @@ func (m *MsGraph) Authenticate(scope Scope) (*MsGraphTokenResponse, error) {
 	if err != nil {
 		return nil, err
 	}
-
+	if tokenResponse.AccessToken == "" {
+		return nil, fmt.Errorf("authentication failed: empty access token")
+	}
 	m.APIClient.AccessToken = tokenResponse.AccessToken
 
 	return &tokenResponse, nil
