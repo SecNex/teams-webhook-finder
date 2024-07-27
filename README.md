@@ -1,5 +1,7 @@
 # Microsoft Teams Webhook Finder
 
+This tool builds on the Microsoft Graph API and the [Microsoft API Wrapper](https://github.com/SecNex/ms-api-wrapper) by [SecNex](https://secnex.io)
+
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/SecNex/teams-webhook-finder/total)
 
 ## Prerequirements
