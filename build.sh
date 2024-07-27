@@ -1,6 +1,6 @@
 # Programmname
 PROGRAM_NAME="webhook-finder"
-VERSION="0.1.2-beta"
+VERSION="0.1.2"
 PROGRAM="$PROGRAM_NAME-$VERSION"
 
 # Windows (64-Bit und 32-Bit)
