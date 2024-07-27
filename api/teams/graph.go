@@ -16,7 +16,8 @@ type TeamsAPIBuilder struct {
 }
 
 type ListTeamsResponse struct {
-	Value []Team `json:"value"`
+	ODataNextLink string `json:"@odata.nextLink"`
+	Value         []Team `json:"value"`
 }
 
 type ListAppsInTeamResponse struct {
@@ -58,7 +59,7 @@ func NewTeamsAPIBuilder(baseURL string) *TeamsAPIBuilder {
 }
 
 func (t *TeamsAPIBuilder) ListTeams() string {
-	return t.BaseURL + "/v1.0" + TEAMS_LIST + "?$select=id,displayName,description&$top=999"
+	return t.BaseURL + "/v1.0" + TEAMS_LIST + "?$select=id,displayName,description&$top=100"
 }
 
 func (t *TeamsAPIBuilder) ListAppsInTeam(teamID string, appDefinition bool) string {
