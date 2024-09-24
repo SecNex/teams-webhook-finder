@@ -39,16 +39,19 @@ body:
         3. Run '...'
         4. See error...
 
-  - type: input
+  - type: dropdown
     id: environment
     attributes:
       label: Environment
-      description: Information about the environment where you encountered the issue (OS, Node version, etc.).
-      placeholder: |
-        Example:
-        - OS: Ubuntu 20.04
-        - Node: 13.14.0
-        - npm: 7.6.3
+      description: Select the environment where you encountered the issue.
+      options:
+        - Ubuntu 20.04
+        - Ubuntu 22.04
+        - macOS 12 (Monterey)
+        - macOS 13 (Ventura)
+        - Windows 10
+        - Windows 11
+        - Other
 
   - type: textarea
     id: additional_context
