@@ -1,0 +1,46 @@
+name: 🚀 Feature Request
+description: Suggest a new feature or enhancement for the application.
+title: '[FEATURE] <Descriptive feature title>'
+labels: ['enhancement', 'Needs Triage']
+assignees:
+  - ''  # Leave empty or specify default assignees
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <!--
+        Thanks for suggesting a new feature or enhancement! Please provide as much detail as possible to help us evaluate your request.
+        -->
+
+  - type: input
+    id: feature_description
+    attributes:
+      label: Feature Description
+      description: |
+        Provide a concise description of the new feature or enhancement you are proposing. What does it do?
+      placeholder: Describe the feature or enhancement.
+
+  - type: input
+    id: use_case
+    attributes:
+      label: Use Case
+      description: |
+        Describe the specific use case or problem this feature solves. Why is it important or valuable?
+      placeholder: Explain why this feature is necessary.
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Expected Benefits
+      description: |
+        What are the expected benefits of this feature for end users or developers?
+      placeholder: Outline the benefits of this feature.
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: |
+        Provide any additional information, links, or screenshots that might help us understand your feature request better.
+      placeholder: Add any other context or details.

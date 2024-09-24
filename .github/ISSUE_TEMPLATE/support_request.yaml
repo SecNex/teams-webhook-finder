@@ -1,0 +1,42 @@
+name: ❓ Support Request
+description: Request help or support with the application.
+title: '[SUPPORT] <Describe your support request>'
+labels: ['question', 'Needs Triage']
+assignees:
+  - ''  # Leave empty or specify default assignees
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <!--
+        If you need help or support with the application, please provide the details below and we'll assist you as soon as possible.
+        -->
+
+  - type: input
+    id: support_description
+    attributes:
+      label: Description of the Issue
+      description: |
+        Please describe the issue you're facing or the support you need.
+      placeholder: Describe your issue or question.
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency Level
+      description: |
+        How urgent is this request?
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: |
+        Add any other information that might help us assist you, such as logs, screenshots, or error messages.
+      placeholder: Provide any additional context or details.
