@@ -1,7 +1,8 @@
 name: 🐞 Bug Report
-description: File a bug/issue related to the application.
-title: '[BUG] <title>'
-labels: ['Bug', 'Needs Triage']
+description: |
+  Use this template to report bugs or issues in the application. Ensure that you provide detailed and accurate information to help us investigate the issue. Be as specific as possible and include all necessary steps and context.
+title: '[BUG] <Descriptive bug title>'
+labels: ['Bug', 'Needs Triage', 'Help Wanted']
 assignees:
   - ''  # Leave empty or specify default assignees
 
@@ -10,40 +11,51 @@ body:
     attributes:
       value: |
         <!--
-        Note: Please search to see if an issue already exists for the bug you encountered.
+        Thank you for helping us improve the application by reporting a bug. Before submitting your issue, please ensure that:
+        
+        - The issue has not already been reported by someone else. Use the search function to check existing issues.
+        - You are running the latest version of the application. Bugs in older versions may already be fixed.
+        
+        The more detailed and precise your report, the quicker we can address the issue. 
         -->
 
   - type: input
     id: current_behavior
     attributes:
       label: Current Behavior
-      description: A concise description of what you're experiencing.
-      placeholder: Provide a description of the current behavior.
+      description: |
+        Describe what the application is currently doing. Be as specific as possible. 
+        If there are any error messages, include them here.
+      placeholder: Describe the unexpected behavior or error in detail.
 
   - type: input
     id: expected_behavior
     attributes:
       label: Expected Behavior
-      description: A concise description of what you expected to happen.
-      placeholder: Provide a description of the expected behavior.
+      description: |
+        What did you expect the application to do? Clearly state the desired behavior or outcome.
+      placeholder: Describe what should have happened instead.
 
   - type: textarea
     id: steps_to_reproduce
     attributes:
       label: Steps to Reproduce
-      description: Describe the steps to reproduce the issue.
+      description: |
+        List all steps necessary to reproduce the issue. This helps us understand the exact sequence of actions that led to the bug.
+        Please include details about any specific configurations, settings, or commands you used.
       placeholder: |
         Example:
-        1. In this environment...
-        2. With this config...
-        3. Run '...'
-        4. See error...
+        1. Open the application and log in.
+        2. Navigate to the "Settings" page.
+        3. Enable "Feature X."
+        4. Click "Save" and observe the error.
 
   - type: dropdown
     id: environment
     attributes:
       label: Environment
-      description: Select the environment where you encountered the issue.
+      description: |
+        Select the environment where the issue occurred. Providing this information helps us reproduce the issue in a similar environment.
       options:
         - Ubuntu 20.04
         - Ubuntu 22.04
@@ -56,9 +68,36 @@ body:
         - Windows 11
         - Other
 
+  - type: input
+    id: application_version
+    attributes:
+      label: Application Version
+      description: |
+        Provide the version of the application you are using. Make sure it is the most recent version before reporting the bug.
+        If you're using a development branch or a custom build, mention that here.
+      placeholder: Example: v2.3.1 or custom build from main branch (commit abc123)
+
+  - type: input
+    id: node_version
+    attributes:
+      label: Node.js Version (if applicable)
+      description: |
+        If applicable, specify the version of Node.js used. This is particularly important for server-side or full-stack applications.
+      placeholder: Example: Node.js v16.13.0
+
+  - type: textarea
+    id: logs_or_screenshots
+    attributes:
+      label: Logs or Screenshots
+      description: |
+        If possible, attach any logs, stack traces, or screenshots that can help us diagnose the issue.
+        You can copy and paste logs directly into this field or upload screenshots.
+      placeholder: Paste logs here or attach screenshots.
+
   - type: textarea
     id: additional_context
     attributes:
-      label: Anything else
-      description: Links, references, or anything else to provide more context.
-      placeholder: Additional context or references.
+      label: Additional Context
+      description: |
+        Provide any other information that might be useful in diagnosing the issue. This could include network conditions, related configuration files, or other unique circumstances.
+      placeholder: Add any extra context or information here.
