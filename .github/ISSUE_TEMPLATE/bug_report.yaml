@@ -1,0 +1,62 @@
+name: 🐞 Bug Report
+description: File a bug/issue related to the application.
+title: '[BUG] <title>'
+labels: ['Bug', 'Needs Triage']
+assignees: ''
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <!--
+        Note: Please search to see if an issue already exists for the bug you encountered.
+        -->
+
+  - type: input
+    id: current_behavior
+    attributes:
+      label: Current Behavior
+      description: A concise description of what you're experiencing.
+      placeholder: Provide a description of the current behavior.
+      required: true
+
+  - type: input
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: A concise description of what you expected to happen.
+      placeholder: Provide a description of the expected behavior.
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Describe the steps to reproduce the issue.
+      placeholder: |
+        Example:
+        1. In this environment...
+        2. With this config...
+        3. Run '...'
+        4. See error...
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Information about the environment where you encountered the issue (OS, Node version, etc.).
+      placeholder: |
+        Example:
+        - OS: Ubuntu 20.04
+        - Node: 13.14.0
+        - npm: 7.6.3
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Anything else
+      description: Links, references, or anything else to provide more context.
+      placeholder: Additional context or references.
+      required: false
