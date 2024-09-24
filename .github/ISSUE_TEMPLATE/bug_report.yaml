@@ -2,7 +2,8 @@ name: 🐞 Bug Report
 description: File a bug/issue related to the application.
 title: '[BUG] <title>'
 labels: ['Bug', 'Needs Triage']
-assignees: ''
+assignees:
+  - ''  # Leave empty or specify default assignees
 
 body:
   - type: markdown
@@ -18,7 +19,6 @@ body:
       label: Current Behavior
       description: A concise description of what you're experiencing.
       placeholder: Provide a description of the current behavior.
-      required: true
 
   - type: input
     id: expected_behavior
@@ -26,7 +26,6 @@ body:
       label: Expected Behavior
       description: A concise description of what you expected to happen.
       placeholder: Provide a description of the expected behavior.
-      required: true
 
   - type: textarea
     id: steps_to_reproduce
@@ -39,7 +38,6 @@ body:
         2. With this config...
         3. Run '...'
         4. See error...
-      required: true
 
   - type: input
     id: environment
@@ -51,7 +49,6 @@ body:
         - OS: Ubuntu 20.04
         - Node: 13.14.0
         - npm: 7.6.3
-      required: false
 
   - type: textarea
     id: additional_context
@@ -59,4 +56,3 @@ body:
       label: Anything else
       description: Links, references, or anything else to provide more context.
       placeholder: Additional context or references.
-      required: false
