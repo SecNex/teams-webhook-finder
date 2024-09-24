@@ -68,22 +68,19 @@ body:
         - Windows 11
         - Other
 
-  - type: input
-    id: application_version
+  - type: dropdown
+    id: golang_version
     attributes:
-      label: Application Version
+      label: Golang Version
       description: |
-        Provide the version of the application you are using. Make sure it is the most recent version before reporting the bug.
-        If you're using a development branch or a custom build, mention that here.
-      placeholder: Example: v2.3.1 or custom build from main branch (commit abc123)
-
-  - type: input
-    id: node_version
-    attributes:
-      label: Node.js Version (if applicable)
-      description: |
-        If applicable, specify the version of Node.js used. This is particularly important for server-side or full-stack applications.
-      placeholder: Example: Node.js v16.13.0
+        Specify the version of Golang you are using. Providing this information helps ensure that the issue is reproducible in the correct environment.
+      options:
+        - 1.19
+        - 1.20
+        - 1.21
+        - 1.22
+        - 1.23.1
+        - Other
 
   - type: textarea
     id: logs_or_screenshots
